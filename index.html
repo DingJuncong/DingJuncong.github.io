@@ -1,58 +1,315 @@
-<!DOCTYPE html>
-<html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dmego Home">
-    <meta name="keywords" content="Dmego,Homepage">
-    <meta name="author" content="Dmego">
-    <title>Dmego Home</title>
-    <link rel='stylesheet' type='text/css' href='https://cdn.webfont.youziku.com/webfonts/nomal/123918/33195/5d21f88af629d8080c5960eb.css' />
-    <link rel="stylesheet" type="text/css" href="./assets/css/vno.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/iconfont.css">
-    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-    <link rel="icon" href="./favicon.ico">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>CSS3梅花飘落</title>
+	<style>
+		body {
+			position: relative;
+			overflow-x: hidden;
+			background:#fff url(http://sandbox.runjs.cn/uploads/rs/475/ao7egt7f/bg.png) no-repeat top right;
+           
+		}
+
+		.leave {
+			position: fixed;
+			width: 25px;
+			height: 20px;
+			-webkit-animation-iteration-count: infinite,infinite;
+			-webkit-animation-direction: normal,normal;
+			-webkit-animation-timing-function: linear,ease-in;
+			-moz-animation-iteration-count: infinite,infinite;
+			-moz-animation-direction: normal,normal;
+			-moz-animation-timing-function: linear,ease-in;
+			-o-animation-iteration-count: infinite,infinite;
+			-o-animation-direction: normal,normal;
+			-o-animation-timing-function: linear,ease-in;
+			animation-iteration-count: infinite,infinite;
+			animation-direction: normal,normal;
+			animation-timing-function: linear,ease-in;
+		}
+
+		.leave>img {
+			position: fixed;
+			width: 25px;
+			height: 20px;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-direction: alternate;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-transform-origin: 50% -100%;
+			-moz-animation-iteration-count: infinite;
+			-moz-animation-direction: alternate;
+			-moz-animation-timing-function: ease-in-out;
+			-moz-transform-origin: 50% -100%;
+			-o-animation-iteration-count: infinite;
+			-o-animation-direction: alternate;
+			-o-animation-timing-function: ease-in-out;
+			-o-transform-origin: 50% -100%;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-timing-function: ease-in-out;
+			transform-origin: 50% -100%;
+		}
+
+		@-webkit-keyframes fade {
+			0% {
+				opacity: 1
+			}
+
+			95% {
+				opacity: 1
+			}
+
+			100% {
+				opacity: 0
+			}
+		}
+
+		@-webkit-keyframes drop {
+			0% {
+				-webkit-transform: translate(30px,-50px)
+			}
+
+			100% {
+				-webkit-transform: translate(-200px,650px)
+			}
+		}
+
+		@-webkit-keyframes clockwiseSpin {
+			0% {
+				-webkit-transform: rotate(-50deg)
+			}
+
+			100% {
+				-webkit-transform: rotate(50deg)
+			}
+		}
+
+		@-webkit-keyframes counterclockwiseSpinAndFlip {
+			0% {
+				-webkit-transform: scale(-1,1) rotate(50deg)
+			}
+
+			100% {
+				-webkit-transform: scale(-1,1) rotate(-50deg)
+			}
+		}
+
+		@-moz-keyframes fade {
+			0% {
+				opacity: 1
+			}
+
+			95% {
+				opacity: 1
+			}
+
+			100% {
+				opacity: 0
+			}
+		}
+
+		@-moz-keyframes drop {
+			0% {
+				-moz-transform: translate(30px,-50px)
+			}
+
+			100% {
+				-moz-transform: translate(-200px,650px)
+			}
+		}
+
+		@-moz-keyframes clockwiseSpin {
+			0% {
+				-moz-transform: rotate(-50deg)
+			}
+
+			100% {
+				-moz-transform: rotate(50deg)
+			}
+		}
+
+		@-moz-keyframes counterclockwiseSpinAndFlip {
+			0% {
+				-moz-transform: scale(-1,1) rotate(50deg)
+			}
+
+			100% {
+				-moz-transform: scale(-1,1) rotate(-50deg)
+			}
+		}
+
+		@-o-keyframes fade {
+			0% {
+				opacity: 1
+			}
+
+			95% {
+				opacity: 1
+			}
+
+			100% {
+				opacity: 0
+			}
+		}
+
+		@-o-keyframes drop {
+			0% {
+				-o-transform: translate(30px,-50px)
+			}
+
+			100% {
+				-o-transform: translate(-200px,650px)
+			}
+		}
+
+		@-o-keyframes clockwiseSpin {
+			0% {
+				-o-transform: rotate(-50deg)
+			}
+
+			100% {
+				-o-transform: rotate(50deg)
+			}
+		}
+
+		@-o-keyframes counterclockwiseSpinAndFlip {
+			0% {
+				-o-transform: scale(-1,1) rotate(50deg)
+			}
+
+			100% {
+				-o-transform: scale(-1,1) rotate(-50deg)
+			}
+		}
+
+		@keyframes fade {
+			0% {
+				opacity: 1
+			}
+
+			95% {
+				opacity: 1
+			}
+
+			100% {
+				opacity: 0
+			}
+		}
+
+		@keyframes drop {
+			0% {
+				transform: translate(30px,-50px)
+			}
+
+			100% {
+				transform: translate(-200px,650px)
+			}
+		}
+
+		@keyframes clockwiseSpin {
+			0% {
+				transform: rotate(-50deg)
+			}
+
+			100% {
+				transform: rotate(50deg)
+			}
+		}
+
+		@keyframes counterclockwiseSpinAndFlip {
+			0% {
+				transform: scale(-1,1) rotate(50deg)
+			}
+
+			100% {
+				transform: scale(-1,1) rotate(-50deg)
+			}
+		}
+
+	</style>
 </head>
-
 <body>
-    <span class="mobile btn-mobile-menu">
-        <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
-        <i class="social iconfont icon-angleup btn-mobile-close__icon hidden"></i>
-    </span>
-    <header id="panel" class="panel-cover">
-        <div class="panel-main">
-            <div class="panel-main__inner panel-inverted">
-                <div class="panel-main__content">
-                    <div class="ih-item circle effect right_to_left">            
-                        <a href="#" title="" class="blog-button">
-                            <div class="img"><img src="./img/logo2.jpg" alt="img" class="js-avatar iUp profilepic"></div>
-                            <div class="info iUp">
-                                <div class="info-back">
-                                    <h2> 
-                                        
-                                            Fighting
-                                        
-                                    </h2>
-                                    <p>
-                                        
-                                            2019 · 努力
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- <a href="#" title="Dmego Home" class="profilepic">
-                        <img src="./img/logo2.jpg" width="80" alt="Dmego`s logo" class="js-avatar iUp show" />
-                    </a> -->
-                    <h1 class="panel-cover__title panel-title iUp">
-                        <a href="#" title="Dmego Home">Dmego</a>
-                    </h1>
-                    <p class="panel-cover__subtitle panel-subtitle iUp">Code Create Life</p>
+	<script>
+		~(function(doc) {
+	var FallingLeaves = function(num, id) {
+			this.body = doc.body;
+			this.support = false;
+			this.container = id ? doc.getElementById('id') : this.body;
+			this.num = num ? num : 5;
+			this.init()
+		};
+	FallingLeaves.prototype = {
+		init: function() {
+			this.supportNot();
+			if (this.support != false) {
+				for (var i = 0; i < this.num; i++) {
+					this.container.appendChild(this.createLeaf())
+				}
+			}
+		},
+		supportNot: function() {
+			var domPrefixes = 'Webkit Moz O ms a'.split(' ');
+			for (var i = 0; i < domPrefixes.length; i++) {
+				if (this.container.style[domPrefixes[i] + 'AnimationName'] !== undefined) {
+					this.support = domPrefixes[i];
+					break
+				}
+				if (domPrefixes[i] == "a") {
+					if (this.container.style.animationName !== undefined) {
+						this.support = domPrefixes[i];
+						break
+					}
+				}
+			}
+		},
+		randomInteger: function(low, high) {
+			return low + Math.floor(Math.random() * (high - low))
+		},
+		randomFloat: function(low, high) {
+			return low + Math.random() * (high - low)
+		},
+		pixelValue: function(value) {
+			return value + 'px'
+		},
+		durationValue: function(value) {
+			return value + 's'
+		},
+		createLeaf: function() {
+			var self = this,
+				leafDiv = doc.createElement('div'),
+				image = doc.createElement('img'),
+				spinAnimationName = (Math.random() < 0.5) ? 'clockwiseSpin' : 'counterclockwiseSpinAndFlip',
+				fadeAndDropDuration = self.durationValue(self.randomFloat(5, 11)),
+				spinDuration = self.durationValue(self.randomFloat(4, 8)),
+				leafDelay = self.durationValue(self.randomFloat(0, 5));
+			leafDiv.className = "leave";
+			image.src = "http://sandbox.runjs.cn/uploads/rs/475/ao7egt7f/" + self.randomInteger(1, self.num) + '.png';
+			leafDiv.style.top = self.pixelValue(30);
+			leafDiv.style.right = self.pixelValue(self.randomInteger(0, 50));
+			if (self.container.style[self.support + 'AnimationName'] !== undefined) {
+				image.style[self.support + 'AnimationName'] = spinAnimationName;
+				image.style[self.support + 'AnimationDuration'] = spinDuration;
+				leafDiv.style[self.support + 'AnimationName'] = 'fade, drop';
+				leafDiv.style[self.support + 'AnimationDelay'] = leafDelay + ', ' + leafDelay;
+				leafDiv.style[self.support + 'AnimationDuration'] = fadeAndDropDuration + ', ' + fadeAndDropDuration
+			}
+			if (this.support == "a") {
+				image.style.animationName = spinAnimationName;
+				image.style.animationDuration = spinDuration;
+				leafDiv.style.animationName = 'fade, drop';
+				leafDiv.style.animationDelay = leafDelay + ', ' + leafDelay;
+				leafDiv.style.animationDuration = fadeAndDropDuration + ', ' + fadeAndDropDuration
+			}
+			leafDiv.appendChild(image);
+			return leafDiv
+		}
+	};
+	new FallingLeaves();
+})(document);
+	</script>
+</body>
+</html>
                     <hr class="panel-cover__divider iUp" />
                     <p id="description" class="panel-cover__description iUp">如何得与凉风约，不共尘沙一并来!
                         <br/>
@@ -126,7 +383,4 @@
     </header>
     <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="./assets/js/fetch.min.js"></script>
-    <script type="text/javascript" src="./assets/js/main.js"></script>
-</body>
-
-</html>
+    <script type="text/javascript" src="./assets/js/mai
